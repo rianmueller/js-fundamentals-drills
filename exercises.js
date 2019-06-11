@@ -8,7 +8,7 @@
 
 let doubleArray = function(doubleArray){
   let doubledArray = [];
-  for(i = 0; i < doubleArray.length; i++){
+  for(let i = 0; i < doubleArray.length; i++){
     doubledArray[i] = doubleArray[i] * 2;
   }
 return doubledArray;
@@ -24,10 +24,10 @@ return doubledArray;
  */
 let sumArrays = function(a, b){
   let sum = 0;
-  for (i = 0; i < a.length; i++){
+  for (let i = 0; i < a.length; i++){
     sum += a[i];
   }
-  for (i = 0; i < b.length; i++){
+  for (let i = 0; i < b.length; i++){
     sum += b[i];
   }
   return sum;
@@ -64,7 +64,7 @@ var arrayLength = function(arr){
  */
 var countAll = function(arr){
   let sum = 0;
-  for (i =0; i < arr.length; i++){
+  for (let i =0; i < arr.length; i++){
     sum += arr[i];
   }
   return sum;
@@ -79,7 +79,7 @@ var countAll = function(arr){
  */
 var countStrings = function(arr){
   let stringLengths = [];
-  for (i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++){
     stringLengths[i] = arr[i].length;
   }
   return stringLengths;
@@ -94,7 +94,7 @@ var countStrings = function(arr){
  */
 let countAllStrings = function(arr){
   let sum = 0;
-  for (i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++){
     sum += arr[i].length;
   }
   return sum;
@@ -131,7 +131,7 @@ let objectSize = function(object){
  */
 let createZeroFilledArray = function(num){
   let array = [];
-  for (i = 0; i < num; i++){
+  for (let i = 0; i < num; i++){
     array[i] = 0;
   }
   return array;
@@ -180,7 +180,7 @@ let lengthOfLast = function(array){
  */
 let sumBelowTen = function(array){
   let sum = 0;
-  for (i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++){
     if (array[i] < 10){
       sum += array[i];
     }
@@ -197,7 +197,7 @@ let sumBelowTen = function(array){
  */
 let moreThanTenLetters = function(array){
   let sum = 0;
-  for (i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++){
     if (array[i].length > 10){
       sum++;
     }
@@ -214,7 +214,7 @@ let moreThanTenLetters = function(array){
  */
 let multiplyAll = function(array){
   let product = 1
-  for (i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++){
     product *= array[i]
   }
   return product;
@@ -229,7 +229,7 @@ let multiplyAll = function(array){
  */
 var sumAllPositive = function(array){
   let sum = 0;
-  for (i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++){
     if (array[i] > 0){
       sum += array[i];
     }
@@ -244,9 +244,9 @@ var sumAllPositive = function(array){
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree = function(array){
-  sum = 0;
-  for (i = 0; i < array.length; i++){
+let stringCountBelowThree = function(array){
+  let sum = 0;
+  for (let i = 0; i < array.length; i++){
     if (array[i].length <= 3){
       sum++;
     }
@@ -261,7 +261,9 @@ var stringCountBelowThree = function(array){
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function(array){
+  return array.length;
+};
 
 /* #getObjectKeys
  *
@@ -475,7 +477,7 @@ module.exports = {
   multiplyAll: multiplyAll,
   sumAllPositive: sumAllPositive,
   stringCountBelowThree: stringCountBelowThree,
-  countObjects: null,
+  countObjects: countObjects,
   getObjectKeys: null,
   getObjectValues: null,
   makeObject: null,
