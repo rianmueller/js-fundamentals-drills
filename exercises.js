@@ -283,7 +283,9 @@ let getObjectKeys = function(object){
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+let getObjectValues = function(object){
+  return Object.values(object);
+};
 
 /* #makeObject
  *
@@ -481,7 +483,7 @@ module.exports = {
   stringCountBelowThree: stringCountBelowThree,
   countObjects: countObjects,
   getObjectKeys: getObjectKeys,
-  getObjectValues: null,
+  getObjectValues: getObjectValues,
   makeObject: null,
   makeObjectReverse: null,
   tupleToObject: null,
