@@ -129,7 +129,13 @@ let objectSize = function(object){
  * @param {Number}
  * @return {Array}
  */
-var createZeroFilledArray;
+let createZeroFilledArray = function(num){
+  let array = [];
+  for (i = 0; i < num; i++){
+    array[i] = 0;
+  }
+  return array;
+};
 
 /* #poppedArray
  *
@@ -415,7 +421,7 @@ module.exports = {
   countAllStrings: countAllStrings,
   convertToArray: convertToArray,
   objectSize: objectSize,
-  createZeroFilledArray: null,
+  createZeroFilledArray: createZeroFilledArray,
   poppedArray: null,
   splitString: null,
   lengthOfLast: null,
