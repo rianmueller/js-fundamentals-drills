@@ -33,19 +33,6 @@ let sumArrays = function(a, b){
   return sum;
 }
 
-// function sumArray(a, b){
-//   let sum = 0;
-//   for (i = 0; i < a.length; i++){
-//     sum += a[i];
-//   }
-//   for (i = 0; i < b.length; i++){
-//     sum += b[i];
-//   }
-//   // console.log(sum);
-//   return sum;
-// }
-// sumArray([1, 2, 3], [5, 6, 7, 8]);
-
 /* #stringCount
  *
  * Takes in a string and returns the length of the string.
@@ -53,7 +40,9 @@ let sumArrays = function(a, b){
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+let stringCount = function(str){
+  return str.length;
+}
 
 /* #arrayLength
  *
@@ -395,7 +384,7 @@ var tupleConvertToObject;
 module.exports = {
   doubleArray: doubleArray,
   sumArrays: sumArrays,
-  stringCount: null,
+  stringCount: stringCount,
   arrayLength: null,
   countAll: null,
   countStrings: null,
