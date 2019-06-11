@@ -63,7 +63,7 @@ var arrayLength = function(arr){
  * @return {Number}
  */
 var countAll = function(arr){
-  sum = 0;
+  let sum = 0;
   for (i =0; i < arr.length; i++){
     sum += arr[i];
   }
@@ -78,7 +78,7 @@ var countAll = function(arr){
  * @return {Array}
  */
 var countStrings = function(arr){
-  stringLengths = [];
+  let stringLengths = [];
   for (i = 0; i < arr.length; i++){
     stringLengths[i] = arr[i].length;
   }
@@ -92,8 +92,8 @@ var countStrings = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var countAllStrings = function(arr){
-  sum = 0;
+let countAllStrings = function(arr){
+  let sum = 0;
   for (i = 0; i < arr.length; i++){
     sum += arr[i].length;
   }
@@ -107,7 +107,10 @@ var countAllStrings = function(arr){
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+var convertToArray = function(obj){
+  let array = Object.values(obj);
+  return array;
+};
 
 /* #objectSize
  *
