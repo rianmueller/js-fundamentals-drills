@@ -212,7 +212,13 @@ let moreThanTenLetters = function(array){
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(array){
+  product = 1
+  for (i = 0; i < array.length; i++){
+    product *= array[i]
+  }
+  return product;
+};
 
 /* #sumAllPositive
  *
@@ -450,7 +456,7 @@ module.exports = {
   lengthOfLast: lengthOfLast,
   sumBelowTen: sumBelowTen,
   moreThanTenLetters: moreThanTenLetters,
-  multiplyAll: null,
+  multiplyAll: multiplyAll,
   sumAllPositive: null,
   stringCountBelowThree: null,
   countObjects: null,
