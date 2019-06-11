@@ -5,37 +5,14 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
+
 let doubleArray = function(doubleArray){
   let doubledArray = [];
-
   for(i = 0; i < doubleArray.length; i++){
     doubledArray[i] = doubleArray[i] * 2;
   }
-// console.log(doubledArray);
 return doubledArray;
 }
-
-// //let doubleArray = [1, 2, 3];
-// let doubledArray = [];
-
-// function doubleArray(doubleArray){
-//   for(i = 0; i < array.length; i++){
-//       doubledArray[i] = array[i] * 2;
-//   }
-// // console.log(doubledArray);
-// return doubledArray;
-// }
-// // double(doubleArray);
-
-// var add = function(n1, n2){
-//   return n1 + n2;
-// }
-// console.log(add(2, 3)); // logs 5
-
-// console.log(subtract(5, 2)); //error
-// var subtract = function(n1, n2){
-//   return n1 - n2;
-// }
 
 /* #sumArrays
  *
@@ -45,7 +22,29 @@ return doubledArray;
  * @param {Array}
  * @return {Number}
  */
-var sumArrays;
+let sumArrays = function(a, b){
+  let sum = 0;
+  for (i = 0; i < a.length; i++){
+    sum += a[i];
+  }
+  for (i = 0; i < b.length; i++){
+    sum += b[i];
+  }
+  return sum;
+}
+
+// function sumArray(a, b){
+//   let sum = 0;
+//   for (i = 0; i < a.length; i++){
+//     sum += a[i];
+//   }
+//   for (i = 0; i < b.length; i++){
+//     sum += b[i];
+//   }
+//   // console.log(sum);
+//   return sum;
+// }
+// sumArray([1, 2, 3], [5, 6, 7, 8]);
 
 /* #stringCount
  *
@@ -395,7 +394,7 @@ var tupleConvertToObject;
 
 module.exports = {
   doubleArray: doubleArray,
-  sumArrays: null,
+  sumArrays: sumArrays,
   stringCount: null,
   arrayLength: null,
   countAll: null,
