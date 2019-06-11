@@ -107,9 +107,8 @@ let countAllStrings = function(arr){
  * @param {Object}
  * @return {Array}
  */
-var convertToArray = function(obj){
-  let array = Object.values(obj);
-  return array;
+let convertToArray = function(obj){
+  return Object.values(obj);
 };
 
 /* #objectSize
@@ -119,7 +118,9 @@ var convertToArray = function(obj){
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+let objectSize = function(object){
+  return Object.keys(object).length;
+};
 
 /* #createZeroFilledArray
  *
@@ -413,7 +414,7 @@ module.exports = {
   countStrings: countStrings,
   countAllStrings: countAllStrings,
   convertToArray: convertToArray,
-  objectSize: null,
+  objectSize: objectSize,
   createZeroFilledArray: null,
   poppedArray: null,
   splitString: null,
