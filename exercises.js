@@ -167,7 +167,7 @@ let splitString = function(string){
  * @param {Array}
  * @return {Number}
  */
-var lengthOfLast = function(array){
+let lengthOfLast = function(array){
   return array[array.length - 1].length;
 };
 
@@ -178,7 +178,15 @@ var lengthOfLast = function(array){
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+let sumBelowTen = function(array){
+  let sum = 0;
+  for (i = 0; i < array.length; i++){
+    if (array[i] < 10){
+      sum += array[i];
+    }
+  }
+  return sum;
+};
 
 /* #moreThanTenLetters
  *
@@ -432,7 +440,7 @@ module.exports = {
   poppedArray: poppedArray,
   splitString: splitString,
   lengthOfLast: lengthOfLast,
-  sumBelowTen: null,
+  sumBelowTen: sumBelowTen,
   moreThanTenLetters: null,
   multiplyAll: null,
   sumAllPositive: null,
